@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Node
+node_modules/
+
+# Test results
+htmlcov/
+.coverage
+
+config.py
+database.sqlite
