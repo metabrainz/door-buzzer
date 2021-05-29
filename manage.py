@@ -9,7 +9,7 @@ cli = click.Group()
 
 @cli.command()
 @click.option("--host", "-h", default="0.0.0.0", show_default=True)
-@click.option("--port", "-p", default=8080, show_default=True)
+@click.option("--port", "-p", default=80, show_default=True)
 @click.option("--debug", "-d", is_flag=True,
               help="Turns debugging mode on or off. If specified, overrides "
                    "'DEBUG' value in the config file.")

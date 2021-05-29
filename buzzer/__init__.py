@@ -8,6 +8,7 @@ bp = Blueprint("door", __name__)
 @bp.route("/open", methods=["POST"])
 def open_door():
 
+    print("remote IP: ", request.remote_addr)
     if not request.remote_addr in config.ALLOWED_IPS:
         raise NotFound
 
@@ -21,7 +22,6 @@ def open_door():
 
     try:
         door.open_door(duration)
-        print("BZZZZZZZZZZ!")
     except door.DoorException as e:
         raise InternalServerError("Failed to open the door: %s" % e)
 
